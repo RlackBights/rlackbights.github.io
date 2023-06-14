@@ -25,6 +25,26 @@ body {
     background-size: cover;
 }
 
+.games-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #FFF;
+    font-family: 'Comic Sans MS';
+}
+
+h2.games-title {
+    font-size: 5vh;
+    top: 96.5vh;
+    -webkit-text-stroke: 0.14vw #000;
+}
+
+h3.games-title {
+    font-size: 3vh;
+    top: 104vh;
+    -webkit-text-stroke: 0.11vw #000;
+}
+
 #abt-me {
     user-select: none;
     background-color: #00ff4c;
