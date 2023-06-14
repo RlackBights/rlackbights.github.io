@@ -17,9 +17,142 @@ body {
 }
 
 #games {
-    background-color: #00F;
+    user-select: none;
+    vertical-align: middle;
+    overflow: hidden;
+    background-image: url(resources/images/games_background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#abt-me {
+    user-select: none;
+    background-color: #00ff4c;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+#snek {
     position: absolute;
+    height: 100%;
+    right: 1vw;
+    filter: opacity(1);
+    transform: scaleY(-1) scaleX(-1) rotate(-5deg);
+}
+
+#ladder {
+    position: absolute;
+    height: 100%;
+    filter: opacity(1);
+    transform: rotate(10deg);
+}
+
+.game-container {
+    margin: 15vh auto;
+    width: 50vw;
+    height: 25vh;
+    background-color: #ffffff;
+    border-radius: 1vh;
+    border: 4px dashed black;
+}
+
+.game-container img
+{
+    position: relative;
+    height: 90%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: .75vw;
+    border-radius: 1vh;
+    float: left;
+}
+
+#parkour {
+    
+    color: #8080FF;
+    border-color: #00D;
+    background-color: #000;
+}
+
+#parkour img {
+    border: 3px dotted #00D;
+}
+
+#parkour h2 {
+    text-align: center;
+}
+
+#parkour p {
+    line-height: 3.2vh;
+    width: 30vw;
+    font-size: 2vh;
+    margin: 0;
+    padding: 0;
+    right: -2.5vw;
+    position: absolute;
+    left: 43vw;
+    text-align: justify;
+}
+
+#connection {
+    color: #844325;
+    border-color: #844325;
+    background-color: #2c1610;
+}
+
+#connection img {
+    border: 3px dotted #844325;
+}
+
+#connection h2 {
+    text-align: center;
+}
+
+#connection p {
+    line-height: 3.2vh;
+    width: 30vw;
+    font-size: 2vh;
+    margin: 0;
+    padding: 0;
+    right: -2.5vw;
+    position: absolute;
+    left: 43vw;
+    text-align: justify;
+}
+
+.section {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.title {
+    position: relative;
     z-index: 1;
+    font-family: 'Comic Sans MS';
+    color: #FFF;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    line-height: 100%;
+}
+
+h1.title {
+    font-size: 4.5vw;
+    -webkit-text-stroke: 0.1vw #000;
+    letter-spacing: -0.2vw;
+}
+
+h2.title {
+    font-size: 3vw;
+    -webkit-text-stroke: 0.075vw #000;
+    letter-spacing: -0.1vw;
+}
+
+h3.title {
+    font-size: 1.4vw;
+    -webkit-text-stroke: 0.01vw #000;
 }
 
 .background-element {
@@ -194,39 +327,4 @@ body {
 
     /* left: 50%;*/
     transform: translateX(-50%);
-}
-
-.section {
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
-}
-
-.title {
-    position: relative;
-    z-index: 1;
-    font-family: 'Comic Sans MS';
-    color: #FFF;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    line-height: 100%;
-}
-
-h1.title {
-    font-size: 4.5vw;
-    -webkit-text-stroke: 0.1vw #000;
-    letter-spacing: -0.2vw;
-}
-
-h2.title {
-    font-size: 3vw;
-    -webkit-text-stroke: 0.075vw #000;
-    letter-spacing: -0.1vw;
-}
-
-h3.title {
-    font-size: 1.4vw;
-    -webkit-text-stroke: 0.01vw #000;
 }
