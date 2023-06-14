@@ -5,6 +5,7 @@ body {
 }
 
 #start {
+    user-select: none;
     background-color: #000;
     display:table-cell;
     vertical-align: middle;
