@@ -1,0 +1,204 @@
+@use 'sass:color';
+
+:root {
+  --text-color: #FFFFFF;        /* #000000 */
+  --background-color: #0A0505;  /* #FAF5F5 */
+  --primary-color: #522b6e;     /* #B891D4 */
+  --secondary-color: #812C2C;   /* #D37E7E */
+  --accent-color: #55C0A8;      /* #3FAB94 */
+  
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #00000000;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  
+  border-radius: 10px;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--secondary-color);
+  font-size: 3vmin;
+}
+
+/*
+888b     d888          d8b               8888888b.                            
+8888b   d8888          Y8P               888   Y88b                           
+88888b.d88888                            888    888                           
+888Y88888P888  8888b.  888 88888b.       888   d88P 8888b.   .d88b.   .d88b.  
+888 Y888P 888     "88b 888 888 "88b      8888888P"     "88b d88P"88b d8P  Y8b 
+888  Y8P  888 .d888888 888 888  888      888       .d888888 888  888 88888888 
+888   "   888 888  888 888 888  888      888       888  888 Y88b 888 Y8b.     
+888       888 "Y888888 888 888  888      888       "Y888888  "Y88888  "Y8888  
+                                                                 888          
+                                                            Y8b d88P          
+                                                             "Y88P"           
+*/
+
+.main-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/*
+88888888888                      .d8888b.           888                   888                             
+    888                         d88P  Y88b          888                   888                             
+    888                         Y88b.               888                   888                             
+    888   8888b.   .d88b.        "Y888b.    .d88b.  888  .d88b.   .d8888b 888888 .d88b.  888d888 .d8888b  
+    888      "88b d88P"88b          "Y88b. d8P  Y8b 888 d8P  Y8b d88P"    888   d88""88b 888P"   88K      
+    888  .d888888 888  888            "888 88888888 888 88888888 888      888   888  888 888     "Y8888b. 
+    888  888  888 Y88b 888      Y88b  d88P Y8b.     888 Y8b.     Y88b.    Y88b. Y88..88P 888          X88 
+    888  "Y888888  "Y88888       "Y8888P"   "Y8888  888  "Y8888   "Y8888P  "Y888 "Y88P"  888      88888P' 
+                       888                                                                                
+                  Y8b d88P                                                                                
+                   "Y88P"                                                                                 
+*/
+
+section {
+  height: 90vh;
+  margin: 5vh 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: color.scale($color: #522b6e, $alpha: -70%);
+}
+
+section::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: var(--background-color);
+  filter: blur(5px);
+}
+
+section::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: var(--background-color);
+  filter: blur(5px);
+}
+
+/*
+888b    888                   888                       
+8888b   888                   888                       
+88888b  888                   888                       
+888Y88b 888  8888b.  888  888 88888b.   8888b.  888d888 
+888 Y88b888     "88b 888  888 888 "88b     "88b 888P"   
+888  Y88888 .d888888 Y88  88P 888  888 .d888888 888     
+888   Y8888 888  888  Y8bd8P  888 d88P 888  888 888     
+888    Y888 "Y888888   Y88P   88888P"  "Y888888 888     
+*/
+
+#navbar-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 2vmin;
+  z-index: 10;
+  width: 100%;
+  list-style-type: none;
+  background: linear-gradient(to bottom, var(--background-color) 75%, #00000000);
+}
+
+#logo-container img {
+  width: 5vmin;
+  padding: 0.5vmin;
+  aspect-ratio: 1/1;
+  transition: all 0.25s;
+}
+
+#logo-container:hover img {
+  width: 6vmin;
+  padding: 0;
+}
+
+#navbar-container li:has(#navbar-buttons) {
+  width: fit-content;
+  margin-right: 2vw;
+}
+
+#navbar-buttons {
+  color: var(--secondary-color);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  column-gap: 2vmin;
+  width: 100%;
+}
+
+#navbar-buttons a {
+  padding: 0 1vmin;
+  transition: all 0.25s ease-in-out;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 1rem;
+}
+
+#navbar-buttons a:hover {
+  font-size: 3.5vmin;
+  filter: brightness(1.5);
+  border: 2px solid var(--secondary-color);
+}
+
+/*
+888    888                        888                  
+888    888                        888                  
+888    888                        888                  
+8888888888  .d88b.   8888b.   .d88888  .d88b.  888d888 
+888    888 d8P  Y8b     "88b d88" 888 d8P  Y8b 888P"   
+888    888 88888888 .d888888 888  888 88888888 888     
+888    888 Y8b.     888  888 Y88b 888 Y8b.     888     
+888    888  "Y8888  "Y888888  "Y88888  "Y8888  888     
+*/
+
+#header-container h1 {
+  width: 100%;
+  font-size: 10vmin;
+  text-align: center;
+}
