@@ -9,7 +9,7 @@ function Navbar() {
             <li>
                 <div id='navbar-buttons'>
                     <a href="https://github.com/RlackBights">GitHub</a>
-                    <a href="https://rlackbights.github.io/wizard-game">Wizard Game</a>
+                    <a href="https://rlackbights.github.io/anki-card-generator">Anki Card Generator</a>
                 </div>
             </li>
         </ul>
