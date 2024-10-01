@@ -10,6 +10,7 @@ function Navbar() {
                 <div id='navbar-buttons'>
                     <a href="https://github.com/RlackBights">GitHub</a>
                     <a href="https://rlackbights.github.io/anki-card-generator">Anki Card Generator</a>
+                    <a href="https://rlackbights.github.io/uni-calendar-manager">Uni Calendar Manager</a>
                 </div>
             </li>
         </ul>
